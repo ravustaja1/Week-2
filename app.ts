@@ -65,3 +65,25 @@ let boat: IBoat = {
 console.log(car)
 console.log(plane)
 console.log(boat)
+
+class VehicleService<T> {
+    private items: T[] = []
+
+
+    add(item: T): void {
+        this.items.push(item)
+    }
+
+    list(): T[] {
+        return this.items
+    }
+}
+
+let cars = new VehicleService<ICar>()
+let boats = new VehicleService<IBoat>()
+
+cars.add(car)
+boats.add(boat)
+
+console.log(cars.list())
+console.log(boats.list())
