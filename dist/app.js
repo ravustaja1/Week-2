@@ -1,4 +1,5 @@
 "use strict";
+console.log("Hello World!");
 let vehicle = {
     model: "Boring generic vehicle",
     color: "Red",
